@@ -1,0 +1,9 @@
+#V2
+;; Get the price of 100 keys when the supply is 0
+(contract-call? .keys get-price u0 u100) ;; u10010
+(contract-call? .keys buy-keys tx-sender u100)
+(contract-call? .keys is-keyholder tx-sender tx-sender) ;; true
+(contract-call? .keys is-keyholder tx-sender  'ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5) ;; false
+(contract-call? .keys get-keys-balance tx-sender  'ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5)
+(contract-call? .keys get-keys-supply tx-sender)
+(contract-call? .keys get-keys-balance tx-sender  'ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5)
